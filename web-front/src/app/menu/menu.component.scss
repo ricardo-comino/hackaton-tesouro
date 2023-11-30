@@ -1,9 +1,27 @@
 .menu {
-  background-color: #333;
-  color: white;
+  background-color: #ffffff;
+  color: ffffff;
   padding: 10px;
   position: fixed;
   bottom: 0;
   width: 100%;
   text-align: center;
+  .custom-green-button{
+    background-color: #69983b;
+    color: #ffffff;
+  }
+   
+  .mat-toolbar-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .borderBottom{
+    width: calc(100vw - 70%);
+    height: 4px;
+    background-color: #000;
+    border-radius: 10px;
+    margin: 10px auto 0 auto;
+  }
+
 }
