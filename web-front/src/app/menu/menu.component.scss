@@ -1,22 +1,21 @@
 .menu {
   background-color: #ffffff;
-  color: ffffff;
   padding: 10px;
   position: fixed;
   bottom: 0;
   width: 100%;
   text-align: center;
-  .custom-green-button{
+  .custom-green-button {
     background-color: #69983b;
     color: #ffffff;
   }
-   
+
   .mat-toolbar-row {
     display: flex;
     width: 100%;
     justify-content: space-between;
   }
-  .borderBottom{
+  .borderBottom {
     width: calc(100vw - 70%);
     height: 4px;
     background-color: #000;
@@ -24,4 +23,10 @@
     margin: 10px auto 0 auto;
   }
 
+  .mat-toolbar {
+    background: none !important;
+  }
+  .colorBlack {
+    color: #000000;
+  }
 }
