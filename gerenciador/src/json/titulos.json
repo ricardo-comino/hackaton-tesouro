@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Nome do cliente",
+    "expiration": "30/11/2029",
+    "value": 9007.32
+  },
+  {
+    "id": 2,
+    "name": "Nome do cliente",
+    "expiration": "13/01/2026",
+    "value": 16054.64
+  },
+  {
+    "id": 3,
+    "name": "Nome do cliente",
+    "expiration": "18/12/2032",
+    "value": 12325.55
+  },
+  {
+    "id": 4,
+    "name": "Nome do cliente",
+    "expiration": "30/05/2029",
+    "value": 7244.32
+  }
+]

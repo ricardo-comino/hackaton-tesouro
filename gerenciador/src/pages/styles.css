@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: #f5f5f5;
+  font-family: "Open Sans", sans-serif;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.main.flex {
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1140px;
+  margin: 120px auto 0;
+  padding: 0 24px;
+  gap: 24px;
+}
+
+.titleFilter {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.titleFilter .filter {
+  position: relative;
+  max-width: 200px;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  max-width: 375px;
+  width: 100%;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  padding: 0 24px;
+  margin: 140px auto 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.full {
+  position: relative;
+  width: 100%;
+}
+
+.black {
+  background-color: #000000 !important;
+  border-radius: 24px !important;
+}
+
+.outlined {
+  border-radius: 24px !important;
+  border-color: #000000 !important;
+  color: #000000 !important;
+}
+
+.outlined:hover {
+  border-radius: 24px !important;
+  border-color: #000000 !important;
+  color: #000000 !important;
+  background-color: #fff !important;
+}
+
+.wrapButton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  padding: 12px 24px;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+h1 {
+  width: 100%;
+  color: #000;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+
+h2 {
+  color: #000;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 22px;
+  width: 100%;
+  display: block;
+}
+
+.center {
+  text-align: center;
+}
+
+.list {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.list .itemList {
+  display: flex;
+  padding: 16px 0px;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.list .itemTotal {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0px;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.list .itemList .line {
+  width: 8px;
+  align-self: stretch;
+  background-color: #000000;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.list .itemList .wrapContent {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+  flex-direction: column;
+  width: 100%;
+  padding-right: 24px;
+}
+
+.list .itemList .wrapText {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  flex: 1 0 0;
+  padding-right: 8px;
+}
+
+.list .itemList .wrapText .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.list .itemList .wrapText .col.small {
+  width: 100%;
+  max-width: 500px;
+}
+
+.list .itemList .wrapText .col.right {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.list .itemList .wrapText .col.center {
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .list .itemList .wrapText {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .list .itemList .wrapText .col {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .list .itemList .wrapText .col.right {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
