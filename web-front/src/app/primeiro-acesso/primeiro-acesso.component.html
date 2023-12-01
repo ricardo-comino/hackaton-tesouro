@@ -1,0 +1,146 @@
+<section class="container-fluid mt-5">
+  <div class="row mb-3">
+    <div class="col-12">
+      <div *ngIf="passoAtual === 1">
+        <h4 class="fw-bold mb-0">Selecione o Cripto Título</h4>
+        <p class="passoAtual mb-0">Passo 1 de 3</p>
+      </div>
+      <div *ngIf="passoAtual === 2">
+        <h4 class="fw-bold mb-0">Selecione a quantidade de Cripto Título</h4>
+        <p class="passoAtual mb-0">Passo 2 de 3</p>
+      </div>
+      <div *ngIf="passoAtual === 3">
+        <h4 class="fw-bold mb-0">Revisão</h4>
+        <p class="passoAtual mb-0">Passo 3 de 3</p>
+      </div>
+
+      <mat-progress-bar
+        mode="determinate"
+        [value]="progresso"
+        color="primary"
+        style="background-color: #000000"
+        *ngIf="passoAtual < 4"
+      ></mat-progress-bar>
+
+      <div *ngIf="passoAtual === 1">
+        <mat-form-field class="rounded-select">
+          <mat-label>Selecione um Cripto Título</mat-label>
+          <mat-select [(ngModel)]="itemPasso1">
+            <mat-option value="valor1">Cripto Tesouro IMPCA 2026</mat-option>
+            <mat-option value="valor2">Cripto Tesouro SELIC 2026</mat-option>
+            <mat-option value="valor3">Cripto Tesouro Educa+ 2029</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button
+        mat-button
+        class="blackButton w-100 mb-4"
+        (click)="confirmarPasso1()"
+      >
+        Avançar
+      </button>
+      </div>
+
+      <div *ngIf="passoAtual === 2">
+        <mat-form-field class="rounded-select">
+          <mat-label>Selecione uma quantidade</mat-label>
+          <mat-select [(ngModel)]="itemPasso2">
+            <mat-option value="valor4"
+              >6,14 unidades
+              <span class="fw-bold"> 10% desconto</span></mat-option
+            >
+            <mat-option value="valor4"
+              >8,32 unidades
+              <span class="fw-bold"> 20% desconto</span></mat-option
+            >
+            <mat-option value="valor4"
+              >9,81 unidades
+              <span class="fw-bold"> 30% desconto</span></mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+        <button
+          mat-button
+          class="blackButton w-100 mb-4"
+          (click)="confirmarPasso2()"
+        >
+          Avançar
+        </button>
+      </div>
+
+      <div *ngIf="passoAtual === 3">
+        <section class="exibeCalculo">
+          <div class="row">
+            <div class="col-8 text-start">
+              <p class="d-flex flex-column">
+                <span class="fw-medium">Cripto Tesouro IPCA</span>
+              </p>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+              <p>R$ 9.007,38</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6 text-start">
+              <p class="fw-medium">Vencimento</p>
+            </div>
+            <div class="col-6 d-flex justify-content-end align-items-center">
+              <p>R$ 2026</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6 text-start">
+              <p class="d-flex flex-column">
+                <span class="fw-medium">Quantidade utilizada</span>
+              </p>
+            </div>
+
+            <div class="col-6 d-flex justify-content-end align-items-center">
+              <p class="fw-bold fs-5">R$ 6,14</p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="row">
+            <div class="col-6 text-start">
+              <p class="fw-bold">Valor a ser bloqueado</p>
+            </div>
+
+            <div class="col-6 d-flex justify-content-end align-items-center">
+              <p class="fw-bold fs-5">R$ 9.007,38</p>
+            </div>
+          </div>
+
+          <hr />
+        </section>
+
+        <button
+          mat-button
+          class="blackButton w-100 mb-4"
+          (click)="confirmarPasso3()"
+        >
+          Confirmar garantia
+        </button>
+      </div>
+
+      <div *ngIf="passoAtual === 4">
+        <div class="col-12 text-center">
+          <img src="../../assets/images/sucesso.png" alt="" />
+          <h4 class="fw-bold mb-0 mt-3">
+            Seu aluguel foi concluido com sucesso
+          </h4>
+          <p class="my-4">
+            Você receberá um e-mail com<br />
+            os detalhes da operação
+          </p>
+        </div>
+
+        <button mat-button class="blackButton w-100 mb-4" routerLink="/">
+          Página inicial
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

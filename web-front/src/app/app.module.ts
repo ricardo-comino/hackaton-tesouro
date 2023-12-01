@@ -12,12 +12,14 @@ import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 import { CalculadoraGarantiasComponent } from './calculadora-garantias/calculadora-garantias.component';
+import { PrimeiroAcessoComponent } from './primeiro-acesso/primeiro-acesso.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 
@@ -29,6 +31,7 @@ import {FormsModule} from '@angular/forms';
     MenuComponent,
     CalculadoraGarantiasComponent,
     LoginComponent,
+    PrimeiroAcessoComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import {FormsModule} from '@angular/forms';
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
