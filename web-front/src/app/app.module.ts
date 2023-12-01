@@ -14,6 +14,7 @@ import { MenuComponent } from './menu/menu.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { CalculadoraGarantiasComponent } from './calculadora-garantias/calculadora-garantias.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { MatSelectModule } from '@angular/material/select';
     SelecaoGarantiaComponent,
     HeaderComponent,
     MenuComponent,
+    CalculadoraGarantiasComponent,
   ],
   imports: [
     BrowserModule,
