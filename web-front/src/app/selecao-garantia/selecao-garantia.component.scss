@@ -9,22 +9,34 @@
   background-color: #000000;
   color: #ffffff;
 }
-.border-radius{
-    border-radius: 50px !important;
+.border-radius {
+  border-radius: 50px !important;
 }
 .blackButton,
 .outLineButtom {
   height: 50px;
-  @extend .border-radius
+  @extend .border-radius;
 }
 
 .outLineButtom {
   border: 1px solid #000000;
-  color: #000000!important;
+  color: #000000 !important;
 }
 
-.mat-mdc-text-field-wrapper{
-    &.mdc-text-field{
-        @extend .border-radius;
+.mat-mdc-text-field-wrapper {
+  &.mdc-text-field {
+    @extend .border-radius;
+  }
+}
+.desk {
+  font-size: 12px;
+}
+::ng-deep {
+  .rounded-select {
+    .mat-mdc-text-field-wrapper {
+      &.mdc-text-field {
+        border-radius: 50px;
+      }
     }
+  }
 }
