@@ -1,0 +1,33 @@
+.blackButton {
+  background-color: #000000;
+  color: #ffffff;
+}
+.border-radius {
+  border-radius: 50px !important;
+}
+.blackButton,
+.outLineButtom {
+  height: 50px;
+  @extend .border-radius;
+}
+
+.outLineButtom {
+  border: 1px solid #000000;
+  color: #000000 !important;
+}
+
+.mat-mdc-text-field-wrapper {
+  &.mdc-text-field {
+    @extend .border-radius;
+  }
+}
+._mb-0{
+    margin-bottom: -15px!important;
+}
+::ng-deep {
+  .formLogin {
+    .mat-mdc-text-field-wrapper {
+      border-radius: 50px;
+    }
+  }
+}

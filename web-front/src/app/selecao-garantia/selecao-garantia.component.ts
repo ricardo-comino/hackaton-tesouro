@@ -13,5 +13,9 @@ export class SelecaoGarantiaComponent {
   irParaCalculadoraGarantias(): void {
     this.router.navigate(['/calculadora-garantias']);
   }
+  
+  irParaLogin(): void {
+    this.router.navigate(['/login']);
+  }
 
 }

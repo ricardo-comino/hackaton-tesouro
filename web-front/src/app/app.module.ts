@@ -10,11 +10,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { SelecaoGarantiaComponent } from './selecao-garantia/selecao-garantia.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
+import { LoginComponent } from './login/login.component';
+import { CalculadoraGarantiasComponent } from './calculadora-garantias/calculadora-garantias.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
-import { CalculadoraGarantiasComponent } from './calculadora-garantias/calculadora-garantias.component';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule} from '@angular/forms';
+
 
 
 @NgModule({
@@ -24,6 +28,7 @@ import { CalculadoraGarantiasComponent } from './calculadora-garantias/calculado
     HeaderComponent,
     MenuComponent,
     CalculadoraGarantiasComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,9 @@ import { CalculadoraGarantiasComponent } from './calculadora-garantias/calculado
     MatIconModule,
     MatToolbarModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
