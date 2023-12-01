@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  MenuItem,
-  FormControl,
-  Select,
-  InputLabel,
-} from "@mui/material/";
+import { MenuItem, FormControl, Select, InputLabel } from "@mui/material/";
 import "./styles.css";
 import jsonList from "../json/titulos.json";
 import Logo from "../images/logo_small_cripto_titulo.svg";

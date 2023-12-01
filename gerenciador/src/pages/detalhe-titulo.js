@@ -1,10 +1,29 @@
 import React from "react";
+import Web3 from "web3";
 import { Button } from "@mui/material/";
 import "./styles.css";
 import Logo from "../images/logo_small_cripto_titulo.svg";
 import { navigate } from "gatsby";
+import ABI_TreasureEscrow from "../json/ABI_TreasureEscrow.json";
 
 const DetalheTitulo = () => {
+
+
+  const onConnect = async () => {
+    let API_URL = "https://polygon-mumbai.infura.io/v3/059b5af27cf84f8686a92bcd0dcea236";
+    let contractAddress = "0xC55755Ce558F6BBC817c35131f99Ab43fF0058d2";
+
+    const web3 = new Web3(API_URL);
+    const contract = new web3.eth.Contract(ABI_TreasureEscrow, contractAddress);
+    const walletB3 = "0x8FF646169760848FeEE5a3E7B7C405AC57c9ae47";
+
+    // const valueBlock = web3.utils.toHex("234");
+    // await contract.methods.ExecutarOrdemSaque(valueBlock, walletB3).call();
+    await contract.methods.getLockedBalance(walletB3).call();
+  };
+
+
+
   return (
     <>
       <main className="main">
@@ -58,7 +77,12 @@ const DetalheTitulo = () => {
             >
               Voltar
             </Button>
-            <Button variant="contained" className="black" size="medium">
+            <Button
+              onClick={() => onConnect()}
+              variant="contained"
+              className="black"
+              size="medium"
+            >
               Executar
             </Button>
           </div>
