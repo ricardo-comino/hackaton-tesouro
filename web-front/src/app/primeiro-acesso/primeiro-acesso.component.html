@@ -24,8 +24,7 @@
 
       <div *ngIf="passoAtual === 1">
         <mat-form-field class="rounded-select">
-          <mat-label>Selecione um Cripto Título</mat-label>
-          <mat-select [(ngModel)]="itemPasso1">
+          <mat-select [(ngModel)]="itemPasso1" placeholder="Selecione um Cripto Título">
             <mat-option value="valor1">Cripto Tesouro IMPCA 2026</mat-option>
             <mat-option value="valor2">Cripto Tesouro SELIC 2026</mat-option>
             <mat-option value="valor3">Cripto Tesouro Educa+ 2029</mat-option>
@@ -42,8 +41,7 @@
 
       <div *ngIf="passoAtual === 2">
         <mat-form-field class="rounded-select">
-          <mat-label>Selecione uma quantidade</mat-label>
-          <mat-select [(ngModel)]="itemPasso2">
+          <mat-select [(ngModel)]="itemPasso2" placeholder="Selecione uma quantidade">
             <mat-option value="valor4"
               >6,14 unidades
               <span class="fw-bold"> 10% desconto</span></mat-option
