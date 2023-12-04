@@ -36,6 +36,8 @@
     .mat-mdc-text-field-wrapper {
       &.mdc-text-field {
         border-radius: 50px;
+        border: 1px solid #000000;
+        color: #000000 !important;
       }
     }
     .mdc-floating-label.mat-mdc-floating-label.ng-star-inserted{
