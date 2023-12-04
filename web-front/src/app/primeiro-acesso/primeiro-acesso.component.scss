@@ -1,0 +1,47 @@
+mat-progress-bar {
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.passoAtual {
+  font-size: 10px;
+  color: #69983b;
+}
+
+.blackButton {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  .border-radius {
+    border-radius: 50px !important;
+  }
+  .blackButton,
+  .outLineButtom {
+    height: 50px;
+    @extend .border-radius;
+  }
+  
+  .outLineButtom {
+    border: 1px solid #000000;
+    color: #000000 !important;
+  }
+
+::ng-deep {
+  .mdc-linear-progress__bar-inner {
+    border-color: #69983b !important;
+  }
+  .rounded-select {
+    .mat-mdc-text-field-wrapper {
+      &.mdc-text-field {
+        border-radius: 50px;
+      }
+    }
+    .mdc-floating-label.mat-mdc-floating-label.ng-star-inserted {
+      padding: 10px 20px;
+    }
+  }
+}

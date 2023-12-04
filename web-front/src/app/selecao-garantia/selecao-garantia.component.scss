@@ -1,0 +1,47 @@
+.chrome_reader_mode {
+  color: #69983b;
+  font-size: 40px;
+}
+.destaque {
+  font-size: 14px;
+}
+.blackButton {
+  background-color: #000000;
+  color: #ffffff;
+}
+.border-radius {
+  border-radius: 50px !important;
+}
+.blackButton,
+.outLineButtom {
+  height: 50px;
+  @extend .border-radius;
+}
+
+.outLineButtom {
+  border: 1px solid #000000;
+  color: #000000 !important;
+}
+
+.mat-mdc-text-field-wrapper {
+  &.mdc-text-field {
+    @extend .border-radius;
+  }
+}
+.desk {
+  font-size: 12px;
+}
+::ng-deep {
+  .rounded-select {
+    .mat-mdc-text-field-wrapper {
+      &.mdc-text-field {
+        border-radius: 50px;
+        border: 1px solid #000000;
+        color: #000000 !important;
+      }
+    }
+    .mdc-floating-label.mat-mdc-floating-label.ng-star-inserted{
+        padding: 10px 20px;
+    }
+  }
+}

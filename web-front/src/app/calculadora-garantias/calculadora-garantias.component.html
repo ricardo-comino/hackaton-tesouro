@@ -1,0 +1,56 @@
+<section class="container-fluid mt-5">
+  <div class="row mb-3">
+    <div class="col-12 text-center">
+      <img src="../../assets/images/calculadora.png" alt="" />
+      <p class="fw-bold mb-0">Calculadora de garantias</p>
+      <p class="desk">Seu aluguel pode reduzir até 30%</p>
+    </div>
+  </div>
+
+  <form class="text-center">
+    <mat-form-field class="w-100 rounded-select">
+      <mat-select placeholder="Selecione um Cripto Titulo">
+        <mat-option value="opcao1">Cripto Tesouro IPCA</mat-option>
+        <mat-option value="opcao2">Cripto Tesouro SELIC</mat-option>
+        <mat-option value="opcao3">Cripto Tesouro Educa+</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <section class="exibeCalculo">
+      <div class="row">
+        <div class="col-8 text-start">
+          <p class="d-flex flex-column">
+            <span class="fw-medium">Cripto Tesouro IPCA</span>
+            <span class="fw-light">6,14 unidades (mínimo)</span>
+          </p>
+        </div>
+        <div class="col-4 d-flex justify-content-end align-items-center">
+          <p>R$ 9.007,38</p>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-6 text-start">
+          <p class="fw-bold">
+            Total do aluguel
+          </p>
+        </div>
+
+        <div class="col-6 d-flex justify-content-end align-items-center">
+          <p class="fw-bold fs-5">R$ 2.600,00</p>
+        </div>
+      </div>
+
+      <hr />
+    </section>
+
+    <button mat-button class="blackButton w-100 mb-4" routerLink="/cadastro">
+      Selecionar Garantia
+    </button>
+    <button mat-button class="outLineButtom w-100" (click)="goBack()">
+      Voltar
+    </button>
+  </form>
+</section>

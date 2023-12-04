@@ -1,0 +1,30 @@
+.search-icon {
+  color: #69983b;
+}
+
+.green-border {
+  border: 2px solid #69983b;
+}
+
+.inputSearch {
+  background-color: #ffffff !important;
+}
+
+.border-radius {
+  border-radius: 50px !important;
+}
+.exponente {
+  font-size: 0.7rem;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+.blackButton {
+  background-color: #000000;
+  color: #ffffff;
+}
+.blackButton,
+.outLineButtom {
+  height: 40px;
+  @extend .border-radius;
+}
