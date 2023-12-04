@@ -20,6 +20,7 @@ import { MatSelectModule } from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { ImoveisComponent } from './imoveis/imoveis.component';
 
 
 
@@ -31,7 +32,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MenuComponent,
     CalculadoraGarantiasComponent,
     LoginComponent,
-    PrimeiroAcessoComponent
+    PrimeiroAcessoComponent,
+    ImoveisComponent
   ],
   imports: [
     BrowserModule,
