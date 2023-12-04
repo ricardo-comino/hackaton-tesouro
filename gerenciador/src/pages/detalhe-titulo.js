@@ -1,28 +1,39 @@
 import React from "react";
 import Web3 from "web3";
 import { Button } from "@mui/material/";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./styles.css";
 import Logo from "../images/logo_small_cripto_titulo.svg";
 import { navigate } from "gatsby";
 import ABI_TreasureEscrow from "../json/ABI_TreasureEscrow.json";
 
 const DetalheTitulo = () => {
-
-
-  const onConnect = async () => {
-    let API_URL = "https://polygon-mumbai.infura.io/v3/059b5af27cf84f8686a92bcd0dcea236";
+  const totalWallet = async () => {
+    let API_URL =
+      "https://polygon-mumbai.infura.io/v3/059b5af27cf84f8686a92bcd0dcea236";
     let contractAddress = "0xC55755Ce558F6BBC817c35131f99Ab43fF0058d2";
 
     const web3 = new Web3(API_URL);
     const contract = new web3.eth.Contract(ABI_TreasureEscrow, contractAddress);
-    const walletB3 = "0x8FF646169760848FeEE5a3E7B7C405AC57c9ae47";
+    const walletB3 = "0xe7647be191be8645d99c35d9459b4661755a6f58";
 
-    // const valueBlock = web3.utils.toHex("234");
-    // await contract.methods.ExecutarOrdemSaque(valueBlock, walletB3).call();
-    await contract.methods.getLockedBalance(walletB3).call();
+    try {
+      const total = await contract.methods.getLockedBalance(walletB3).call();
+      const convertHex = web3.utils.toHex(total);
+      toast.success(
+        `O valor em garantia é R$ ${web3.utils
+          .hexToNumber(convertHex)
+          .toLocaleString("pt-BR")}`
+      );
+    } catch {
+      toast.warn(`Houve um erro inesperado`);
+    }
   };
 
-
+  const executarGarantia = async () => {
+    toast.success(`O valor transferido com sucesso`);
+  };
 
   return (
     <>
@@ -55,12 +66,14 @@ const DetalheTitulo = () => {
                   <div className="col right">
                     <div className="wrapText">
                       <div className="col right">
-                        <p>
-                          <b>Quantidade:</b> 6,14 unidades
-                        </p>
-                        <p>
-                          <b>Garantia:</b> R$ 9.007,32
-                        </p>
+                        <Button
+                          onClick={() => totalWallet()}
+                          variant="outlined"
+                          className="outlined"
+                          size="medium"
+                        >
+                          Consultar garantia
+                        </Button>
                       </div>
                     </div>
                   </div>
@@ -78,7 +91,7 @@ const DetalheTitulo = () => {
               Voltar
             </Button>
             <Button
-              onClick={() => onConnect()}
+              onClick={() => executarGarantia()}
               variant="contained"
               className="black"
               size="medium"
@@ -87,6 +100,18 @@ const DetalheTitulo = () => {
             </Button>
           </div>
         </div>
+        <ToastContainer
+          position="bottom-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
       </main>
     </>
   );
