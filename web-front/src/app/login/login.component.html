@@ -8,17 +8,17 @@
   <form class="formLogin">
 
       <mat-form-field class="w-100 _mb-0">        
-        <input matInput placeholder="E-mail" />
+        <input matInput placeholder="E-mail" type="email" />
       </mat-form-field>
 
       <mat-form-field class="w-100">
-        <input matInput placeholder="Senha" />
+        <input matInput placeholder="Senha" type="password" />
       </mat-form-field>
       
-    <button mat-button class="blackButton w-100 mb-2">
+    <button mat-button class="blackButton w-100 mb-2" routerLink="/cadastro">
       Avançar
     </button>
-    <button mat-button class="outLineButtom w-100">
+    <button mat-button class="outLineButtom w-100" routerLink="/cadastro">
         Primeiro acesso
     </button>
   </form>
